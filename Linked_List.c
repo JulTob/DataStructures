@@ -12,7 +12,7 @@ struct Data_list* Build_Next(){
 
 void Add( Data V, struct Data_list L){
     if (L.next == NULL) {
-        L.next = Build_Node();
+        L.next = Build_Next();
         L.Data = V;
     } else { 
        Add(V,&L.next);
