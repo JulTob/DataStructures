@@ -10,11 +10,19 @@ struct Data_list* Build_Next(){
    return ptr;
 }
 
-void Add( Data V, struct Data_list L){
-    if (L.next == NULL) {
-        L.next = Build_Next();
-        L.Data = V;
+void Add( Data V, struct Data_list * L){
+    if (L == NULL) {
+        L = Build_Next();
+        L->val = V;
+        L->next = NULL;
     } else { 
-       Add(V,&L.next);
+       Add(V,L.next);
     };
+};
+
+void Insert( Data V, struct Data_list * N){
+     struct Data_list * L;
+        L = Build_Next();
+        L->val = V;
+        L->next = N;
 };
