@@ -5,7 +5,7 @@ struct Data_List
     struct Data_List * next;
 };
 
-struct Data_list* Build_Node(){
+struct Data_list* Build_Next(){
    struct Data_list *ptr = (struct Data_list*)malloc(sizeof(struct Data_list));
    return ptr;
 }
