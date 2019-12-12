@@ -1,5 +1,6 @@
+#define Data int
 struct test_struct
 {
-    int val;
+    Data val;
     struct test_struct * next;
 };
