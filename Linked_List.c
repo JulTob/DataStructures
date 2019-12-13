@@ -26,3 +26,14 @@ void Insert( Data V, struct Data_list * N){
         L->val = V;
         L->next = N;
 };
+
+
+boolean Is_In_List( Data V, struct Data_list * L){
+    if (L==NULL){
+        return false;
+    } else if(L->val == V){
+        return true;   
+    } else {
+        return Is_In_List(V,L->next);    
+    }
+}
